@@ -23,6 +23,9 @@ public class MyApplication extends Application {
      //初始化腾讯im
     private void initTXIM() {
         //初始化IMSDK
+        /**
+         * 参数2 是内容部debug中的索引，不是指特定的哪个debug
+         */
         InitBusiness.start(getApplicationContext(),4);
         //初始化TLS
         TlsBusiness.init(getApplicationContext());

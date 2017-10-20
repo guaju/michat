@@ -88,7 +88,9 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private void realLogin() {
+        //初始化TLSService
         TLSService tlsService = TLSService.getInstance();
+        //调用自带注册方法 参数3是登录的监听
         tlsService.TLSPwdLogin(username, password, new PwdLoginListener());
     }
 
@@ -130,7 +132,7 @@ public class LoginActivity extends AppCompatActivity {
             Util.notOK(context, errInfo);
         }
     }
-
+    //跳转到注册页面的回调
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);

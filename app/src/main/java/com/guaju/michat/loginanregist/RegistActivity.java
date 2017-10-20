@@ -90,7 +90,7 @@ public class RegistActivity extends AppCompatActivity {
         Toast.makeText(RegistActivity.this, "成功注册 " + userInfo.identifier, Toast.LENGTH_SHORT).show();
         TLSService.getInstance().setLastErrno(0);
         StrAccountLogin login = new StrAccountLogin(context);
-
+        //给登录页面返回数据
         Intent intent = new Intent();
         intent.putExtra("username",username);
         setResult(1,intent);
